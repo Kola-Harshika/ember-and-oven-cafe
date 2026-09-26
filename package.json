@@ -9,6 +9,7 @@
     "dev:api": "node --watch --env-file-if-exists=.env --import tsx server/src/index.ts",
     "dev:full": "node scripts/dev.mjs",
     "build": "tsc -b && vite build",
+    "start": "node --import tsx server/src/index.ts",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit && tsc --noEmit -p server/tsconfig.json",
     "db:migrate": "node --env-file-if-exists=.env --import tsx server/src/db/migrate.ts",
