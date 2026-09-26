@@ -1,0 +1,42 @@
+{
+  "name": "ember-oven-cafe",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Ember & Oven - a warm, interactive online cafe experience.",
+  "scripts": {
+    "dev": "vite",
+    "dev:api": "node --watch --env-file-if-exists=.env --import tsx server/src/index.ts",
+    "dev:full": "node scripts/dev.mjs",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p server/tsconfig.json",
+    "db:migrate": "node --env-file-if-exists=.env --import tsx server/src/db/migrate.ts",
+    "db:seed": "node --env-file-if-exists=.env --import tsx server/src/db/seed.ts",
+    "db:setup": "npm run db:migrate && npm run db:seed",
+    "db:reset": "node --env-file-if-exists=.env --import tsx server/src/db/reset.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "framer-motion": "^11.11.17",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.6.3",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/supertest": "^7.2.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "supertest": "^7.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.9"
+  }
+}

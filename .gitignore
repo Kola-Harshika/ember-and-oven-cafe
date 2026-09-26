@@ -1,0 +1,22 @@
+node_modules
+dist
+dist-ssr
+*.local
+.vite
+.DS_Store
+Thumbs.db
+
+# environment files (keep the template, never the real values)
+.env
+.env.*
+!.env.example
+
+# local SQLite database + write-ahead logs
+server/data
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# test + build caches
+coverage
+*.tsbuildinfo
